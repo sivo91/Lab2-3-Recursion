@@ -1,13 +1,50 @@
 
+// TYPO L2-3.cpp NO L2-1.cpp
+
+
+//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+//* Program name    :  Ackerman function / L2-3.ccp                     * 
+//*                                                                     * 
+//* Written by      : Peter Sivak                                       * 
+//*                                                                     * 
+//* Purpose         : Program is testing Ackerman function.             * 
+//*                                                                     * 
+//*                                                                     * 
+//* Inputs          : User enters 2 nonnegative integers                * 
+//*                                                                     * 
+//* Outputs         : Program answer question: How many times has the   * 
+//*                   Ackerman Function been recursively called.        * 
+//*                                                                     * 
+//* Calls           : No internal or external calls, other than system  * 
+//*                                                                     * 
+//* Structure       : BEGIN                                             * 
+//*                        Program prompts the user to enter 2          *
+//                        nonnegative integers                          * 
+//*                   STOP                                              * 
+//*                       Program display how many times was Ackerman   * 
+//*                       Function recursively called                   * 
+//*---------------------------------------------------------------------* 
+//* Collaboration   : Got help from Prof. John Urrutia                  * 
+//*                                                                     * 
+//*                                                                     * 
+//*---------------------------------------------------------------------* 
+//* Change Log:                                                         * 
+//*                         Revision                                    * 
+//*       Date    Changed  Rel Ver Mod Purpose                          * 
+//*  10/02/23      psivak   000.000.000 Initial release of program      *  
+//*                                                                     * 
+//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+
 #include <iostream>
-#include <stdexcept> // page 1020
+#include <stdexcept> 
 
 using namespace std;
 
 
 const int MAX_RECURSION_COUNT = 100000;
 
-// recursive func
+
 int Ackerman(int m, int n, int& recursiveCallCount)
 {
     recursiveCallCount++; // increment the count for each recursive call
@@ -48,7 +85,7 @@ int main()
         cin >> n;
     } while (n < 0);
 
-    try 
+    try
     {
         int recursiveCallCount = 0; // initialize the count of recursive calls
 
@@ -63,7 +100,7 @@ int main()
         cout << "Error: " << e.what() << endl;
     }
 
-    
+
 
     return 0;
 }
